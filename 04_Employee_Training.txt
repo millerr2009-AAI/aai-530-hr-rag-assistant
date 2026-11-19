@@ -1,0 +1,18 @@
+# Employee Training
+Document ID: 04_Employee_Training
+Version: 1.0
+
+## Core onboarding courses
+Common assignments include information security awareness, privacy and data handling, anti-harassment and respectful workplace conduct, workplace safety, and role-specific compliance training.
+
+## Finding courses
+Open the learning management system (LMS) using company single sign-on. Check the assigned learning path and each course due date. Training availability may depend on account provisioning.
+
+## Completion evidence
+Finish the course and required assessment, then verify that the LMS shows Completed. Keep the completion certificate if one is issued. A video watched without the required assessment may not count.
+
+## Missed deadlines or accessibility
+Notify the manager and learning administrator before a due date if possible. Request accessibility accommodations or an alternative format through the approved HR channel.
+
+## Refresher training
+Some courses recur annually or when policies change. The LMS assignment is the source of truth for an individual employee’s requirements and due dates.
