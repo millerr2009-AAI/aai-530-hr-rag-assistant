@@ -1,0 +1,19 @@
+# First-Week Onboarding Tasks
+Document ID: 01_First_Week_Onboarding_Tasks
+Version: 1.0
+
+
+## Before day one
+HR sends a welcome message and start-day instructions. The hiring manager confirms the schedule, assigned buddy, and workspace. IT prepares approved equipment and accounts. The employee should not send identity documents through ordinary email.
+
+## Day 1: orientation
+Meet the manager and team; review the role, working hours, and first-week goals. Complete identity and employment-eligibility verification through the approved HR process. Confirm payroll information through the secure HR portal. Review the code of conduct and security basics.
+
+## Days 2–3: access and training
+Confirm that email, multifactor authentication, collaboration tools, and role-specific systems work. Report missing access using the IT service desk. Complete assigned security, privacy, and workplace conduct training. Review benefits enrollment instructions and deadlines in the HR portal.
+
+## Days 4–5: team integration
+Attend role-specific introductions, agree on initial deliverables, and review performance expectations. Confirm completion of required forms and training with HR. Schedule a check-in with the manager.
+
+## Completion and escalation
+Employees can ask HR about paperwork and benefits, IT about access or devices, and managers about job expectations. If an item cannot be completed, record the blocker and notify the appropriate owner; do not mark it complete prematurely.

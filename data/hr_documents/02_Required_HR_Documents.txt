@@ -1,0 +1,18 @@
+# Required HR Documents
+Document ID: 02_Required_HR_Documents
+Version: 1.0
+
+## New-hire paperwork
+Typical documents include an offer letter or employment agreement, tax withholding forms, payroll direct-deposit instructions, emergency contact information, and signed policy acknowledgments. Requirements vary by location and employment classification.
+
+## Employment eligibility
+In the United States, employers generally complete Form I-9 for eligible new hires under applicable rules. Employees should follow the employer’s authorized verification procedure and current government instructions. Do not upload identity documents to an unapproved chat or knowledge base.
+
+## Submission procedure
+Sign in to the approved HR portal, open the onboarding checklist, upload or complete each requested item, and confirm its status. HR should provide a secure alternative if the portal is inaccessible.
+
+## Deadlines and corrections
+Follow the deadlines shown in the HR portal and any legally mandated deadlines. If a form has an error, contact HR to reopen or correct it rather than submitting duplicate or altered records.
+
+## Confidentiality
+Personnel, banking, tax, and identity information is restricted. The RAG knowledge base contains process guidance only; it must not store completed employee forms or sensitive identifiers.

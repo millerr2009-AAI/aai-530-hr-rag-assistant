@@ -1,0 +1,18 @@
+# Equipment and Account Requests
+Document ID: 05_Equipment_and_Account_Requests
+Version: 1.0
+
+## Standard setup
+Depending on the role, employees may receive a laptop, charger, headset, and approved software. Managers approve role-specific hardware and access according to business need.
+
+## Requesting equipment
+Open an IT service desk ticket, choose Hardware Request, identify the device or accessory, provide business justification, and obtain required manager approval. Do not include passwords or confidential customer data.
+
+## Requesting system access
+Choose Access Request, specify the application, required permission level, and business reason. The application owner or manager approves access before IT provisions it.
+
+## First login and MFA
+Use the activation instructions sent through an approved channel, create a strong unique password, and enroll in multifactor authentication. Never share one-time codes with anyone.
+
+## Troubleshooting and offboarding
+For broken devices or locked accounts, submit an incident ticket through the service desk. Report lost devices immediately. On departure, return assigned equipment and follow account deactivation instructions.

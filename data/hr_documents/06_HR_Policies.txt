@@ -1,0 +1,18 @@
+# HR Policies
+Document ID: 06_HR_Policies
+Version: 1.0
+
+## Code of conduct
+Employees are expected to act professionally, treat coworkers respectfully, protect company information, and report suspected misconduct through designated channels.
+
+## Equal opportunity and respectful workplace
+The organization aims to provide a workplace free from unlawful discrimination, harassment, and retaliation. Report concerns to HR or an approved reporting channel; managers should escalate complaints promptly.
+
+## Attendance and timekeeping
+Employees follow their assigned schedule, record time accurately where required, and notify managers about absences using approved procedures. Applicable laws and individual employment terms take precedence over this sample.
+
+## Leave and accommodations
+Time off, protected leave, and reasonable accommodations are handled under applicable law and official company policies. Contact HR for eligibility and confidential case handling; do not assume universal accrual or approval rules.
+
+## Data protection and policy precedence
+Use approved systems, follow least-privilege access, and report security incidents promptly. This document is illustrative only: the signed employee handbook, current policy notices, plan documents, and applicable law govern if there is a conflict.

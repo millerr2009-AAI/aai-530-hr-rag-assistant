@@ -1,0 +1,21 @@
+# HR Knowledge Base
+Document ID: 07_HR_Knowledge_Base
+Version: 1.0
+
+## Purpose and scope
+This index helps employees find general onboarding, payroll, benefits, training, equipment, and workplace policy guidance. It is a fictional example for retrieval-augmented generation testing, not an authoritative company handbook.
+
+## Who handles what
+HR onboarding: paperwork, employment verification, and employee records. Benefits HR: plan enrollment and eligibility. Payroll: pay dates, tax withholding, and direct deposit. IT service desk: devices, accounts, MFA, and application access. Manager: role expectations, schedule, and approvals.
+
+## Frequently asked questions
+Q: Where do I submit new-hire forms? A: In the secure HR portal. Q: Where are my training assignments? A: In the LMS. Q: How do I request a laptop? A: Submit a hardware request in the IT service desk. Q: How do I choose benefits? A: Review and enroll through the benefits portal.
+
+## Search and escalation
+Search using plain-language questions, such as “How do I request software access?” If the answer requires a personal record, current deadline, case status, or legal interpretation, direct the employee to the authoritative system or responsible team.
+
+## RAG response rules
+Answers should cite the retrieved document title and section, distinguish examples from official policy, and state when information is absent. Do not invent company contacts, URLs, deadlines, approval times, benefit amounts, or employee-specific status.
+
+## Document ownership
+Suggested owners: HR Operations for onboarding and policies, Benefits HR for enrollment, Learning and Development for training, and IT for equipment and accounts. Review and replace sample text with approved policies before production use.
