@@ -231,8 +231,14 @@ __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 
-# Local project data and generated retrieval indexes
-data/
+# Local project data and generated retrieval indexes.
+# NOTE: this excludes the CONTENTS of data/ rather than the directory itself. Git cannot
+# re-include a path inside an excluded directory, so "data/" would make the negation below
+# impossible.
+data/*
+# The shared fictional HR corpus IS the project dataset, so it is versioned deliberately.
+# Local scratch files and generated retrieval indexes stay ignored.
+!data/hr_documents/
 vector_store/
 chroma_db/
 .faiss_cache/

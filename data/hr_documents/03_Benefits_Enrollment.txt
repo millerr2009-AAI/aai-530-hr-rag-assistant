@@ -1,0 +1,18 @@
+# Benefits Enrollment
+Document ID: 03_Benefits_Enrollment
+Version: 1.0
+
+## Overview
+Eligible employees may be offered medical, dental, vision, retirement, life insurance, or other benefits. Actual eligibility, costs, waiting periods, and plan terms are determined by the employer’s official plan documents.
+
+## How to enroll
+Open the secure benefits portal, review plan summaries and dependent eligibility, compare coverage and payroll deductions, select plans, add eligible dependents, and save the confirmation receipt.
+
+## Enrollment window
+Use the exact enrollment deadline shown in the benefits portal or welcome materials. This sample knowledge base intentionally does not specify a universal deadline. Missing a window may limit changes until the next permitted enrollment period or qualifying event.
+
+## Qualifying life events
+Certain events such as marriage, birth, adoption, or loss of other coverage may allow a midyear change under plan rules. Notify benefits HR promptly and consult the official plan documents for evidence and deadlines.
+
+## Help and privacy
+Contact the benefits team for eligibility or coverage questions. Never place medical information, Social Security numbers, or dependent identity records in a general IT ticket or RAG chat.

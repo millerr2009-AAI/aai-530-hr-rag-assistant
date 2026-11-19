@@ -39,10 +39,11 @@ They are not an official employee handbook or a source of legal advice.
 
 ## Project Status
 
-Initial repository setup and knowledge-base review are underway.
+The seven fictional HR documents are committed under `data/hr_documents/`.
 
-The model, retrieval tools, user interface, and evaluation approach
-have not yet been selected.
+The component interface, the integration pipeline, the command-line interface and the
+contract tests are in place and run against stub components. Retrieval, answer generation
+and the evaluation are in development.
 
 ## Data and Security
 
@@ -55,6 +56,52 @@ have not yet been selected.
 Data setup and application installation instructions will be added
 as implementation progresses.
 
+## Setup and running
+
+Requires Python 3.10 or newer.
+
+```bash
+git clone https://github.com/millerr2009-AAI/aai-530-hr-rag-assistant.git
+cd aai-530-hr-rag-assistant
+python -m venv .venv && source .venv/bin/activate    # Windows: .venv\\Scripts\\activate
+pip install -r requirements.txt
+```
+
+API keys go in a local `.env` file, which is gitignored. Copy `.env.example` and fill it in:
+
+```bash
+cp .env.example .env
+```
+
+Run the assistant against the stub components, which need no API key and no index:
+
+```bash
+cd src
+python -m hr_assistant.cli --demo -q "How do I enroll in benefits?"
+python -m hr_assistant.cli --demo                      # interactive
+```
+
+Run the contract tests:
+
+```bash
+python -m pytest tests/ -q
+```
+
+## Component interface
+
+The data shapes passed between retrieval, generation and the interface are defined in
+[`INTERFACE.md`](INTERFACE.md) and in code in `src/hr_assistant/contracts.py`. Build your
+component against those types and integration is wiring rather than rewriting.
+
+`src/hr_assistant/stubs.py` provides a fake retriever and generator that satisfy the
+contracts, so the pipeline, interface and error handling run before the real components
+exist.
+
 ## Team
 
-Team members and responsibilities will be added after confirmation.
+| Member | Responsibility |
+|---|---|
+| Russell Miller | Test questions, evaluation code, results tables |
+| Arslan Isaac | Document loading, chunking, retrieval |
+| Christian Lopez | Model setup, prompting, answer generation |
+| Faisal Jaffer | Question entry, answer display, pipeline integration, error handling, docs |
