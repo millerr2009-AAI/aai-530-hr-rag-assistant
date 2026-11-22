@@ -1,0 +1,5 @@
+# Generated synthetic smoke-test output
+smoke_test/
+
+# Python bytecode
+__pycache__/
