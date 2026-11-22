@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.0",
+  "description": "Development evaluation cases for the fictional HR RAG assistant.",
+  "cases": [
+    {
+      "question_id": "DEV01",
+      "split": "development",
+      "category": "direct_procedure",
+      "question": "How do I submit my new-hire paperwork?",
+      "answerability": "answerable",
+      "expected_points": [
+        "Sign in to the approved HR portal.",
+        "Open the onboarding checklist.",
+        "Upload or complete each requested item and confirm its status."
+      ],
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "doc_id": "02_Required_HR_Documents",
+              "section": "Submission procedure"
+            }
+          ]
+        }
+      ],
+      "must_not_claim": [
+        "An invented portal URL or submission deadline."
+      ]
+    },
+    {
+      "question_id": "DEV02",
+      "split": "development",
+      "category": "direct_procedure",
+      "question": "How do I enroll in benefits?",
+      "answerability": "answerable",
+      "expected_points": [
+        "Open the secure benefits portal.",
+        "Review plan summaries and dependent eligibility.",
+        "Compare coverage and payroll deductions.",
+        "Select plans, add eligible dependents if applicable, and save the confirmation receipt."
+      ],
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "doc_id": "03_Benefits_Enrollment",
+              "section": "How to enroll"
+            }
+          ]
+        }
+      ],
+      "must_not_claim": [
+        "An invented enrollment deadline, benefit cost, or portal URL."
+      ]
+    },
+    {
+      "question_id": "DEV03",
+      "split": "development",
+      "category": "completion_verification",
+      "question": "I watched the training video but skipped its required assessment. Can I mark the course complete?",
+      "answerability": "answerable",
+      "expected_points": [
+        "Watching the video alone is not sufficient when an assessment is required.",
+        "Finish the course and required assessment.",
+        "Verify that the LMS shows Completed."
+      ],
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "doc_id": "04_Employee_Training",
+              "section": "Completion evidence"
+            }
+          ]
+        }
+      ],
+      "must_not_claim": [
+        "The employee has completed the training.",
+        "A passing score not specified in the corpus."
+      ]
+    },
+    {
+      "question_id": "DEV04",
+      "split": "development",
+      "category": "cross_document_synthesis",
+      "question": "My LMS account is not working and my training is due tomorrow. What should I do?",
+      "answerability": "answerable",
+      "expected_points": [
+        "Report the account or access problem to the IT service desk.",
+        "Notify the manager and learning administrator before the due date if possible."
+      ],
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "doc_id": "01_First_Week_Onboarding_Tasks",
+              "section": "Days 2–3: access and training"
+            },
+            {
+              "doc_id": "05_Equipment_and_Account_Requests",
+              "section": "Troubleshooting and offboarding"
+            },
+            {
+              "doc_id": "07_HR_Knowledge_Base",
+              "section": "Who handles what"
+            }
+          ]
+        },
+        {
+          "alternatives": [
+            {
+              "doc_id": "04_Employee_Training",
+              "section": "Missed deadlines or accessibility"
+            }
+          ]
+        }
+      ],
+      "must_not_claim": [
+        "An automatic deadline extension.",
+        "A guaranteed account-repair time.",
+        "The training can be marked complete."
+      ]
+    },
+    {
+      "question_id": "DEV05",
+      "split": "development",
+      "category": "missing_exact_value",
+      "question": "How many days after my start date do I have to enroll in benefits?",
+      "answerability": "exact_value_unavailable",
+      "expected_points": [
+        "The sample knowledge base does not specify a universal enrollment deadline.",
+        "Use the exact deadline shown in the benefits portal or welcome materials."
+      ],
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "doc_id": "03_Benefits_Enrollment",
+              "section": "Enrollment window"
+            }
+          ]
+        }
+      ],
+      "must_not_claim": [
+        "A fixed number of enrollment days."
+      ]
+    },
+    {
+      "question_id": "DEV06",
+      "split": "development",
+      "category": "employee_specific_status",
+      "question": "Has my direct-deposit change been approved?",
+      "answerability": "personal_status_unavailable",
+      "expected_points": [
+        "The supplied documents do not establish the employee's approval status.",
+        "Direct the employee to Payroll or the authoritative system to check."
+      ],
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "doc_id": "07_HR_Knowledge_Base",
+              "section": "Who handles what"
+            }
+          ]
+        },
+        {
+          "alternatives": [
+            {
+              "doc_id": "07_HR_Knowledge_Base",
+              "section": "Search and escalation"
+            }
+          ]
+        }
+      ],
+      "must_not_claim": [
+        "The change is approved, pending, or rejected.",
+        "An invented payroll contact or processing time."
+      ]
+    },
+    {
+      "question_id": "DEV07",
+      "split": "development",
+      "category": "ambiguity",
+      "question": "Where do I submit it?",
+      "answerability": "clarification_required",
+      "expected_points": [
+        "Ask which item or document the employee wants to submit.",
+        "Do not choose one submission destination without clarification."
+      ],
+      "evidence_groups": [],
+      "must_not_claim": [
+        "A definitive submission destination for the unspecified item."
+      ]
+    },
+    {
+      "question_id": "DEV08",
+      "split": "development",
+      "category": "retrieval_regression",
+      "question": "Who should I contact about payroll?",
+      "answerability": "answerable",
+      "expected_points": [
+        "Direct payroll questions to Payroll.",
+        "Payroll handles pay dates, tax withholding, and direct deposit."
+      ],
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "doc_id": "07_HR_Knowledge_Base",
+              "section": "Who handles what"
+            }
+          ]
+        }
+      ],
+      "must_not_claim": [
+        "An invented person's name, email address, or phone number."
+      ]
+    }
+  ]
+}
