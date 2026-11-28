@@ -1,0 +1,5 @@
+# Integration layer and tests. Retrieval and generation owners: add what your
+# component needs, keeping versions loose so we do not fight over pins.
+python-dotenv>=1.0
+requests>=2.31
+pytest>=8.0
