@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from types import SimpleNamespace
@@ -197,15 +198,61 @@ def smoke_test():
     print("No real retrieval, generation, or model requests were run.")
 
 
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "src"))
+
+
+def load_cases(path=None):
+    path = Path(path) if path else Path(__file__).resolve().parent / "questions.json"
+    with path.open(encoding="utf-8") as file:
+        return json.load(file)["cases"]
+
+
+def build_assistant(mode):
+    from hr_assistant.pipeline import HRAssistant
+
+    if mode == "stub":
+        from hr_assistant.stubs import StubGenerator, StubRetriever
+        return HRAssistant(StubRetriever(), StubGenerator())
+
+    raise NotImplementedError(
+        "Real retriever and generator are not wired in yet. "
+        "Import them here once Arslan's and Christian's classes are merged."
+    )
+
+
+def save_run(records, label, uses_real_components):
+    folder = Path(__file__).resolve().parent / "runs"
+    folder.mkdir(exist_ok=True)
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+    output_file = folder / f"{label}_{timestamp}.json"
+    with output_file.open("x", encoding="utf-8") as file:
+        json.dump({
+            "run_label": label,
+            "uses_real_components": uses_real_components,
+            "records": records,
+        }, file, indent=2)
+    return output_file
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--smoke-test", action="store_true")
+    parser.add_argument("--stub", action="store_true",
+                        help="Run all cases against stub components (plumbing check only).")
+    parser.add_argument("--run", action="store_true",
+                        help="Run all cases against the real components.")
+    parser.add_argument("--label", default=None)
     args = parser.parse_args()
 
-    if not args.smoke_test:
-        parser.error(
-            "Only --smoke-test is configured. "
-            "Real assistant wiring will be added after integration."
-        )
-
-    smoke_test()
+    if args.smoke_test:
+        smoke_test()
+    elif args.stub or args.run:
+        mode = "stub" if args.stub else "real"
+        label = args.label or ("stub_run" if args.stub else "real_run")
+        records = evaluate(build_assistant(mode), load_cases(), label)
+        path = save_run(records, label, uses_real_components=(mode == "real"))
+        done = sum(r["run_status"] == "completed" for r in records)
+        print(f"{done}/{len(records)} cases completed. Saved: {path}")
+    else:
+        parser.error("Choose --smoke-test, --stub, or --run.")

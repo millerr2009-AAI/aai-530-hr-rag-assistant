@@ -3,3 +3,4 @@ smoke_test/
 
 # Python bytecode
 __pycache__/
+runs/
